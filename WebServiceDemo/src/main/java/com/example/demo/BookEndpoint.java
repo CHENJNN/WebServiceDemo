@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,8 +16,9 @@ public class BookEndpoint {
     private static final String NAMESPACE_URI = "http://www.example.com/book";
 
     @Autowired
-    BookRepository bookRepository;
+    TestRepository bookRepository;
 
+    @PostMapping("/bookService")
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getBookRequest")
     public @ResponsePayload GetBookResponse getBookByIsbn(@RequestPayload GetBookRequest request)
             throws InterruptedException {
