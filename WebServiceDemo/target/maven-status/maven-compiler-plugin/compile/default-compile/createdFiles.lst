@@ -1,0 +1,7 @@
+com\example\book\GetBookRequest.class
+com\example\book\ObjectFactory.class
+com\example\myproject\ServletInitializer.class
+com\example\book\package-info.class
+com\example\book\Book.class
+com\example\myproject\MyProjectApplication.class
+com\example\book\GetBookResponse.class
